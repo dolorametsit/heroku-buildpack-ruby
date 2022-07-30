@@ -8,6 +8,10 @@ ENV_DIR=$3
 BIN_DIR=$(cd $(dirname $0); pwd)
 BUILDPACK_DIR=$(dirname $BIN_DIR)
 
+apt-get install -y software-properties-common
+
+apt-get update
+
 add-apt-repository ppa:libwebp-dev
 add-apt-repository ppa:webp
 
